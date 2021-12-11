@@ -1,0 +1,10 @@
+<div *ngIf="isAuth">
+  <ul  *ngFor="let contact of contacts">
+    <li>
+    <span>{{contact.name}}: type="{{contact.type}}"
+      <a>{{contact.value}}</a>
+    </span>
+    </li>
+  </ul>
+</div>
+

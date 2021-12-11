@@ -1,0 +1,13 @@
+<div>
+  <p class="alert" *ngIf="massage != null">{{massage}}</p>
+  <dl>
+    <dt>Name</dt>
+    <dd><input type="text" [(ngModel)]="createContactRequest.name"></dd>
+    <dt>Type</dt>
+    <dd><input type="text" [(ngModel)]="createContactRequest.type"></dd>
+    <dt>Value</dt>
+    <dd><input type="password" [(ngModel)]="createContactRequest.value"></dd>
+  </dl>
+  <button (click)="createContact()">Add</button>
+</div>
+
