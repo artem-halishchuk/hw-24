@@ -1,8 +1,289 @@
 /* You can add global styles to this file, and also import other style files */
-* {
-  margin: 0;
-  padding: 0;
-}
+
 .alert {
   color: red;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  font-family: Tahoma, "Helvetica Neue", sans-serif;
+  font-size: 10px;
+}
+
+button {
+  border: 2px solid transparent;
+  border-radius: 5px;
+  background-color: rgb(224, 224, 224);
+}
+button:hover {
+  border: 2px solid rgb(145, 155, 158);
+  background-color: rgba(191, 197, 201, 0.82);
+}
+input:focus, button:focus {
+  border: 2px solid rgb(145, 155, 158);
+}
+input:hover {
+  border: 2px solid rgb(88, 93, 95);
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+.login h1 {
+  font-size: 2.7rem;
+  font-weight: 700;
+  color: #2024c1;
+}
+.login-form {
+  border: 1px solid black;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 0px 50px -29px rgba(34, 60, 80, 0.58);
+  background-color: rgba(228, 231, 232, 0.11);
+  padding: 20px;
+  width: 320px;
+  gap: 10px;
+}
+.login-form .form-group input {
+  width: 100%;
+  height: 34px;
+  border-radius: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  font-size: 1.3rem;
+}
+.btn-login {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #383838;
+  width: 70%;
+  padding: 6px;
+}
+.btn-register {
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #383838;
+  width: 50%;
+  padding: 2px;
+}
+/*------------------------------------------------*/
+.register {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.register-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+}
+.register-content h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2024c1;
+  margin: 10px;
+}
+.register-form {
+  border: 1px solid black;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 0px 50px -29px rgba(34, 60, 80, 0.58);
+  background-color: rgba(228, 231, 232, 0.11);
+  margin: 0 10px 10px 10px;
+  padding: 20px;
+  width: 320px;
+  gap: 10px;
+}
+.register-form .form-group input {
+  width: 100%;
+  height: 34px;
+  border-radius: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  font-size: 1.2rem;
+}
+.register-form .btn-register {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #383838;
+  width: 70%;
+  padding: 6px;
+}
+.register-form .btn-close {
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #383838;
+  width: 50%;
+  padding: 2px;
+}
+/*------------------------------------------------*/
+.popup {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.popup-content {
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+.popup-massage {
+  font-weight: 500;
+  font-size: 2.2rem;
+  color: #383838;
+  margin: 10px;
+  max-width: 260px;
+}
+.popup-btn {
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #383838;
+  width: 50%;
+  padding: 2px;
+}
+/*------------------------------------------------*/
+.book {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1024px;
+  margin-top: 30px;
+  height: 100vh;
+  background-color: #ffffff;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.book-head {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 2px 2px 7px 0px rgba(34, 60, 80, 0.18);
+}
+.book-name-login {
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #383838;
+  margin: 0;
+}
+.btn-book-out {
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #383838;
+  height: 30px;
+  padding: 2px;
+}
+
+
+
+.create-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  box-shadow: 2px 2px 7px 0px rgba(34, 60, 80, 0.18);
+}
+.add-form-input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 300px;
+}
+.create-contact input, .create-contact select {
+  width: 100%;
+  height: 28px;
+  border-radius: 5px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+}
+.add-form-btn button {
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #383838;
+  padding: 2px;
+  max-width: 300px;
+}
+
+.content {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+.leftBar {
+  min-width: 300px;
+}
+.noteList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.noteList li {
+  padding: 10px;
+  box-shadow: 2px 2px 7px 0px rgba(34, 60, 80, 0.8);
+  background-color: rgba(239, 239, 239, 0.34);
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  font-size: 1rem;
+  border-radius: 2px;
+}
+.noteList li:active {
+  box-shadow: 0px 0px 4px 0px rgba(34, 60, 80, 0.06) inset;
+}
+.noteList li.active {
+  background-color: black;
+  background-color: rgba(213, 213, 213, 0.76);
+}
+
+.delete-contact.active {
+  background-color: rgb(245, 245, 245);
+}
+/*--------------------------*/
+.aboutContact {
+  font-size: 1rem;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  box-shadow: 2px 2px 7px 0px rgba(34, 60, 80, 0.18);
 }

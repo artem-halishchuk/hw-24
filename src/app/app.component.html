@@ -1,12 +1,12 @@
-<nav>
+<nav class="head">
   <ul>
-    <li *ngIf="!isAuth"><a routerLink="login" routerLinkActive="active">Вход</a></li>
-    <li *ngIf="!isAuth"><a routerLink="register" routerLinkActive="active">Регистрация</a></li>
+    <li *ngIf="!isAuth"><a routerLink="login" routerLinkActive="active">Sign in</a></li>
+    <li *ngIf="!isAuth"><a routerLink="register" routerLinkActive="active">Sign up</a></li>
 
-    <li *ngIf="isAuth"><a routerLink="contacts" routerLinkActive="active">Контакты</a></li>
-    <li *ngIf="isAuth"><a routerLink="create-contact" routerLinkActive="active">Создать новый контакт</a></li>
+    <li *ngIf="isAuth"><a routerLink="contacts" routerLinkActive="active">Contacts</a></li>
+    <li *ngIf="isAuth"><a routerLink="create-contact" routerLinkActive="active">Create new contact</a></li>
 
-    <li *ngIf="isAuth"><a (click)="authService.logout()" routerLink="login" routerLinkActive="active">Выход</a></li>
+    <li *ngIf="isAuth"><a (click)="authService.logout()" routerLink="login" routerLinkActive="active">Sign out</a></li>
   </ul>
 </nav>
 <main>

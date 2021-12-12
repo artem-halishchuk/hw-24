@@ -1,5 +1,4 @@
-<div>
-  <p class="alert" *ngIf="massage != null">{{massage}}</p>
+<div class="create-contact">
   <div class="add-form-input">
     <input id="add-contact-name" type="text" placeholder="Contact name" [(ngModel)]="createContactRequest.name">
 
@@ -21,6 +20,10 @@
       <!--#contactValue="ngModel" required pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$"-->
     </div>
   </div>
-  <button (click)="createContact()">Add</button>
+  <div class="add-form-btn">
+    <button (click)="createContact()">Add</button>
+  </div>
+
+  <p class="alert" *ngIf="massage != null">{{massage}}</p>
 </div>
 

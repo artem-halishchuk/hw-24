@@ -17,6 +17,7 @@ export class ContactsComponent implements OnInit, OnDestroy{
   public name:string|null = null;
   public type:string|null = null;
   public value:string|null = null;
+  public out:string|null = null;
 
   constructor(@Inject(ContactsService) private contactsService:ContactsService,
               @Inject(AuthService) private authAuth:AuthService,
@@ -28,7 +29,10 @@ export class ContactsComponent implements OnInit, OnDestroy{
       this.name = contact.name;
       this.type = contact.type;
       this.value = contact.value;
+      if(this.getContact) this.out = this.name + ' - ' + this.type + ' ' + this.value;
+      else this.out = null;
     });
+
   }
 
   ngOnDestroy(): void {
@@ -41,6 +45,7 @@ export class ContactsComponent implements OnInit, OnDestroy{
     this.contactsService.getContacts().subscribe(r => {
       if(r.contacts !== null) this.contacts = r.contacts;
     })
+
   }
   showContact(contact:Contact) {
     console.log('отдали заметку в сервис');

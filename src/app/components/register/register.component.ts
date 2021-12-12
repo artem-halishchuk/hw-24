@@ -26,11 +26,11 @@ export class RegisterComponent implements OnInit {
           }
           else {
             this.ngOnInit();
-            this.error = "Пользователь зарегистрирован";
+            this.error = "User is registered";
             setTimeout(() => this.ngOnInit(), 2000);
           }
         },
-        () => this.error = 'Неизвестная ошибка'
+        () => this.error = 'Unknown error'
       );
   }
 

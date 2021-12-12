@@ -21,11 +21,11 @@ export class LoginComponent implements OnInit{
       .subscribe(
         r => {
           if(!r.isSuccessful()) {
-            this.error = r.error;
+            this.error = 'User is not found';
             this.isLogin = true;
           }
         },
-        () => this.error = 'Неизвестная ошибка'
+        () => this.error = 'Unknown error'
       );
   }
 
