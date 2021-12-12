@@ -11,8 +11,7 @@ import { ContactsComponent } from './components/contacts/contacts.component';
 import {AuthGuard} from "./guard/auth.guard";
 import { RegisterComponent } from './components/register/register.component';
 import { CreateContactComponent } from './components/create-contact/create-contact.component';
-import { TestComponent } from './components/test/test.component';
-//import { NotFoundComponent }   from './not-found.component';
+
 
 const routes:Routes = [
   {path:'login', component:LoginComponent},
@@ -24,18 +23,15 @@ const routes:Routes = [
   {path:'register', component:RegisterComponent},
 
   {path:'', pathMatch:'full', redirectTo:'login'},
-  //{ path: '**', component: NotFoundComponent }
-
 ];
 @NgModule({
   declarations: [
     AppComponent,
-    UsersComponent,
+    //UsersComponent,
     LoginComponent,
     ContactsComponent,
     RegisterComponent,
     CreateContactComponent,
-    TestComponent,
   ],
   imports: [
     BrowserModule, HttpClientModule, RouterModule.forRoot(routes), FormsModule

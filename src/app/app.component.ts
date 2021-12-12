@@ -18,7 +18,7 @@ export class AppComponent {
     this.isAuth = authService.isAuth();
     this.authService.authSubject.subscribe(n => {
       this.isAuth = true;
-      this.router.navigate(['users']);
+      this.router.navigate(['contacts']);
     });
     this.authService.logoutSubject.subscribe(n => this.isAuth = false);
   }

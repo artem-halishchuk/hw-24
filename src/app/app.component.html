@@ -2,7 +2,6 @@
   <ul>
     <li *ngIf="!isAuth"><a routerLink="login" routerLinkActive="active">Вход</a></li>
     <li *ngIf="!isAuth"><a routerLink="register" routerLinkActive="active">Регистрация</a></li>
-    <li><a routerLink="users" routerLinkActive="active">Список пользователей</a></li>
 
     <li *ngIf="isAuth"><a routerLink="contacts" routerLinkActive="active">Контакты</a></li>
     <li *ngIf="isAuth"><a routerLink="create-contact" routerLinkActive="active">Создать новый контакт</a></li>

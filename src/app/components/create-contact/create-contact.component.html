@@ -1,13 +1,26 @@
 <div>
   <p class="alert" *ngIf="massage != null">{{massage}}</p>
-  <dl>
-    <dt>Name</dt>
-    <dd><input type="text" [(ngModel)]="createContactRequest.name"></dd>
-    <dt>Type</dt>
-    <dd><input type="text" [(ngModel)]="createContactRequest.type"></dd>
-    <dt>Value</dt>
-    <dd><input type="password" [(ngModel)]="createContactRequest.value"></dd>
-  </dl>
+  <div class="add-form-input">
+    <input id="add-contact-name" type="text" placeholder="Contact name" [(ngModel)]="createContactRequest.name">
+
+    <select id="create-contact-type" required [(ngModel)]="createContactRequest.type">
+      <option value="">--- Select an option ---</option>
+      <option value="phone" ng-selected="selected">phone</option>
+      <option value="email">email</option>
+    </select>
+    <div *ngIf="createContactRequest.type === ''">
+      <input id="create-contact-type-value" type="text" placeholder="select type" [(ngModel)]="createContactRequest.value" disabled>
+      <!--#contactValue="ngModel" required pattern="^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$"-->
+    </div>
+    <div *ngIf="createContactRequest.type === 'phone'">
+      <input id="create-contact-type-value" type="text" placeholder="phone" [(ngModel)]="createContactRequest.value">
+      <!--#contactValue="ngModel" required pattern="^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$"-->
+    </div>
+    <div *ngIf="createContactRequest.type === 'email'">
+      <input id="create-contact-type-value2" type="text" placeholder="email" [(ngModel)]="createContactRequest.value">
+      <!--#contactValue="ngModel" required pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$"-->
+    </div>
+  </div>
   <button (click)="createContact()">Add</button>
 </div>
 

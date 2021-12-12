@@ -1,9 +1,7 @@
 import {Component, Inject, OnInit, OnDestroy} from '@angular/core';
 import {CreateContactRequest} from "../../models/createContact-request";
-import {CreateContactResponse} from "../../models/createContact-response";
 import {CreateContactService} from "../../services/create-contact.service";
 import {AuthService} from "../../services/auth.service";
-import {LoginResponse} from "../../models/login-response";
 
 @Component({
   selector: 'app-create-contact',
@@ -14,10 +12,10 @@ export class CreateContactComponent{
 
   public createContactRequest = new CreateContactRequest('', '', '');
   public massage:string|null = null;
-  isAuth:boolean = false;
 
   constructor(@Inject(AuthService) private authService:AuthService,
-              @Inject(CreateContactService) private createContactService:CreateContactService) { }
+              @Inject(CreateContactService) private createContactService:CreateContactService) {
+  }
 
   public token = this.authService.getToken();
 
@@ -42,8 +40,6 @@ export class CreateContactComponent{
 
       );
   }
-
-  public tk() {console.log(this.token)}
 
   ngOnInit(): void {
   }
